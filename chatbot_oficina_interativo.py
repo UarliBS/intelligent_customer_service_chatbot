@@ -51,7 +51,7 @@ def adicionar_historico(tela):
     if len(pilha_caminho) < TAMANHO_MAX_HISTORICO:
         pilha_caminho.append(tela)
     else:
-        print("\nErro: histórico de navegação cheio!")
+        print("\nAviso: histórico de navegação cheio!")
 
 
 def mostrar_menu():
@@ -284,6 +284,7 @@ def aplicar_desconto():
 # Programa principal:
 
 def iniciar_chatbot():
+    print("")
     print("Bem-vindo ao chatbot da Oficina Mecânica Simas Turbo!")
     print("Digite uma opção do menu ou 'sair' para encerrar.")
 
