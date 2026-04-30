@@ -1,5 +1,5 @@
 # ============================================================
-# CHATBOT INTERATIVO - OFICINA MECÂNICA SIMAS TURBO
+# CHATBOT INTERATIVO - OFICINA MECÂNICA
 # Versão para executar no Terminal
 # ============================================================
 
@@ -10,8 +10,8 @@ comandos_sair = ["sair", "tchau", "finalizar", "encerrar", "vou me sair"]
 
 fila_atendimento = [
     ["Julião da Doze", "Comum"],
-    ["Thomas Turbano", "Premium"],
-    ["Nakama Tikomo", "Comum"],
+    ["Kvaratskhelia", "Premium"],
+    ["Alanzoka", "Comum"],
     ["Zé do Pão", "Premium"],
     ["Adiomário Pragmático", "Comum"],
     ["Zé Martinho", "Comum"],
@@ -21,11 +21,19 @@ fila_atendimento = [
 pilha_caminho = ["Início"]
 
 respostas = {
-    "endereco": "Av. Principal, 456 - Centro",
+    "servicos": "Oferecemos: troca de óleo, alinhamento, balanceamento e revisão completa.",
+    "serviços": "Oferecemos: troca de óleo, alinhamento, balanceamento e revisão completa.",
+    "Serviços": "Oferecemos: troca de óleo, alinhamento, balanceamento e revisão completa.",
+    "horario": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "horário": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "Horário": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "Horários": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "endereco": "Av. Principal, 456 - Centro.",
+    "endereço": "Av. Principal, 456 - Centro.",
+    "Endereço": "Av. Principal, 456 - Centro.",
     "telefone": "(75) 98888-0000",
-    "contato": "(75) 98888-0000",
-    "horario": "Segunda a Sexta, das 8h às 17h",
-    "servicos": "Oferecemos revisão, troca de óleo, alinhamento, balanceamento e diagnóstico."
+    "Telefone": "(75) 98888-0000",
+    "Contato": "(75) 98888-0000"
 }
 
 catalogo = [
@@ -285,7 +293,7 @@ def aplicar_desconto():
 
 def iniciar_chatbot():
     print("")
-    print("Bem-vindo ao chatbot da Oficina Mecânica Simas Turbo!")
+    print("Bem-vindo ao chatbot da Oficina Mecânica!")
     print("Digite uma opção do menu ou 'sair' para encerrar.")
 
     while True:
@@ -293,7 +301,7 @@ def iniciar_chatbot():
         opcao = input("Escolha uma opção: ").strip().lower()
 
         if opcao in comandos_sair or opcao == "0":
-            print("\nAtendimento encerrado. Obrigado por conversar com a oficina!")
+            print("\nAtendimento encerrado. Obrigado por conversar com nossa oficina!")
             break
         elif opcao == "1":
             ver_categorias()

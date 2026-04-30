@@ -1,5 +1,5 @@
 # ============================================================
-# CHATBOT - OFICINA MECÂNICA SIMAS TURBO
+# CHATBOT - OFICINA MECÂNICA
 # ============================================================
 
 # 1. Categorias
@@ -14,7 +14,7 @@ print(categorias)
 comandos_sair = ["sair","tchau","finalizar","encerrar","vou me sair"]
 
 # 3. Fila de espera
-fila_atendimento = ["Julião da Doze", "Thomas Turbano", "Nakama Tikomo", "Zé do Pão", "Adiomário Pragmático", "Zé Martinho", "Paran Golé Doismi Lonzi"]
+fila_atendimento = ["Julião da Doze", "Kvaratskhelia", "Alanzoka", "Zé do Pão", "Adiomário Pragmático", "Zé Martinho", "Paran Golé Doismi Lonzi"]
 cliente_atendido = fila_atendimento.pop(0)
 
 # 4. Histórico de navegação
@@ -23,11 +23,19 @@ ultima_tela = pilha_caminho.pop()
 
 # 5. Base de respostas rápidas (dicionário)
 respostas = {
-    "endereco": "Av. Principal, 456 - Centro",
+    "servicos": "Oferecemos: troca de óleo, alinhamento, balanceamento e revisão completa.",
+    "serviços": "Oferecemos: troca de óleo, alinhamento, balanceamento e revisão completa.",
+    "Serviços": "Oferecemos: troca de óleo, alinhamento, balanceamento e revisão completa.",
+    "horario": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "horário": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "Horário": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "Horários": "Funcionamos de segunda a sexta, das 8h às 17h.",
+    "endereco": "Av. Principal, 456 - Centro.",
+    "endereço": "Av. Principal, 456 - Centro.",
+    "Endereço": "Av. Principal, 456 - Centro.",
     "telefone": "(75) 98888-0000",
-    "contato": "(75) 98888-0000",
-    "horario": "Segunda a Sexta, das 8h às 17h",
-    "servicos": "Oferecemos revisão, troca de óleo, alinhamento e diagnóstico"
+    "Telefone": "(75) 98888-0000",
+    "Contato": "(75) 98888-0000"
 }
 
 # 6. Catálogo de itens
@@ -130,8 +138,8 @@ while len(pilha_navegacao) > 0:
 #A fila de ouro para clientes premium
 fila_atendimento = [
     ["Julião da Doze", "Comum"], 
-    ["Thomas Turbano", "Premium"], 
-    ["Nakama Tikomo", "Comum"], 
+    ["Kvaratskhelia", "Premium"], 
+    ["Alanzoka", "Comum"], 
     ["Zé do Pão", "Premium"], 
     ["Adiomário Pragmático", "Comum"], 
     ["Zé Martinho", "Comum"], 
@@ -144,7 +152,6 @@ atendido = fila_atendimento.pop(0) # Remove o primeiro (indice 0)
 
 print(f"Chamando cliente: {atendido}")
 print(f"Proximo da fila agora e: {fila_atendimento[0]}")
-
 
 # 15. Fila Vazia e Segurança de Acesso
 if len(fila_atendimento) > 0:
