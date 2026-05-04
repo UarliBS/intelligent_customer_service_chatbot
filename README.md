@@ -152,7 +152,7 @@ app = Flask(__name__)
 
 API_URL = "http://localhost:8080"
 INSTANCE = "oficina"
-API_KEY = "minha-chave"
+API_KEY = "sua-chave-aqui"
 
 def enviar_resposta(numero, texto):
     requests.post(
